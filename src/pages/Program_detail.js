@@ -18,8 +18,8 @@ import $ from 'jquery';
 import { FacebookProvider, Page } from 'react-facebook';
 
 var get_pathname=window.location.pathname.split('/').filter(Boolean);
-var get_id=get_pathname[0];
-var get_detail_id=get_pathname[2];
+const get_id=3;
+var get_detail_id=get_pathname[1]; //原本是2
 
 let img = 'img';
 let ad_img = 'ad_img';
@@ -185,7 +185,7 @@ function Program_detail() {
                 <ul>
                 {
                   menu.facebook=="" ? "" :                            
-                  <li><a href={menu.facebook} target="_blank"><img src={facebook_img} alt={img}/></a></li>
+                  <li><a href={menu.facebook} target="_blank" rel="noreferrer"><img src={facebook_img} alt={img}/></a></li>
                 }
                   <li><a href="##"><img src={talk_img} alt={img}/></a></li>
                 </ul>
@@ -196,7 +196,7 @@ function Program_detail() {
             <ul>
               {
                 menu.facebook=="" ? "" :                            
-                <li><a href={menu.facebook} target="_blank"><img src={facebook_img} alt={img}/></a></li>
+                <li><a href={menu.facebook} target="_blank" rel="noreferrer"><img src={facebook_img} alt={img}/></a></li>
               }
                 <li><a href="##"><img src={talk_img} alt={img}/></a></li>
             </ul>
@@ -245,11 +245,11 @@ function Program_detail() {
                       <ul>
                         {
                           menu.facebook=="" ? "" :                            
-                          <li className="font16_1"><a href={menu.facebook} target="_blank">加入</a></li>
+                          <li className="font16_1"><a href={menu.facebook} target="_blank" rel="noreferrer">加入</a></li>
                           }
                           {
                           menu.youtube=="" ? "" :                            
-                          <li className="font16_2"><a href={menu.youtube} target="_blank">訂閱</a></li>
+                          <li className="font16_2"><a href={menu.youtube} target="_blank" rel="noreferrer">訂閱</a></li>
                         }
                       </ul>
                     </div>

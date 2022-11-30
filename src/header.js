@@ -182,7 +182,7 @@ class Header extends React.Component {
                 </div>
 
 
-                <div class="program_header_titel font26_1"><a href={"/"+this.props.get_id}>{this.state.title}</a></div>
+                <div class="program_header_titel font26_1"><a href={"/"}>{this.state.title}</a></div>
                 <div className="program_header_nav">
                     <ul className="font20_1">
                         {
@@ -190,7 +190,7 @@ class Header extends React.Component {
                             ? 'Loading menu...'
                             : this.state.menu.map((key, index) => (
                                 index == 0 ?
-                                 <li key={key.id}> <a href={"/"+this.props.get_id+'/list'} >{key.title}</a> </li>
+                                 <li key={key.id}> <a href={'/list'} >{key.title}</a> </li>
                                  :<li key={key.id}> <a href={key.url}>{key.title}</a> </li>
                             ))
                         }

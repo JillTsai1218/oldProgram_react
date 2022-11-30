@@ -15,8 +15,8 @@ import Footer from './../components/Footer.js';
 import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 import ReactPaginate from 'react-paginate';
 
-var get_pathname=window.location.pathname.split('/').filter(Boolean);
-var get_id=get_pathname[0];
+
+const get_id=3; //節目id
 
 let img = 'img';
 let ad_img = 'ad_img';
