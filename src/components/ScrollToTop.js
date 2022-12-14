@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import gotop from './../images/gotop.png';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import './../css/program_master.css';
-import './../css/program_article_share.css';
 
 const ScrollToTop = () => {
     const [showTopBtn, setShowTopBtn] = useState(false);
