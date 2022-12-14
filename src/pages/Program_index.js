@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import Header from './../header';
 import {Helmet} from "react-helmet";
 import Myjs from './../Myjs';
-import gotop from './../images/gotop.png';
 import ad_top from './../images/ad970x90.jpg';
 import ad_top_m from './../images/ad320x100.jpg';
 import kv_img from './../images/kv850x470.jpg';

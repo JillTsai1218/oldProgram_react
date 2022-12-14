@@ -3,7 +3,6 @@ import Header from './../header';
 import Like from './../like';
 import {Helmet} from "react-helmet";
 import Myjs from './../Myjs';
-import gotop from './../images/gotop.png';
 import ad_300x250 from './../images/ad300x250.jpg';
 import ad_650x100 from './../images/ad650x100.jpg';
 import facebook_img from './../images/content_community_list_facebook.svg';

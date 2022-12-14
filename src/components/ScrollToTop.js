@@ -25,7 +25,7 @@ const ScrollToTop = () => {
     let ad_img = 'ad_img';
     return (
         <div id="back">
-            {showTopBtn && (<div onClick={goToTop} id="back-img1"><img src={gotop} alt={ad_img}/></div>)}
+            {showTopBtn && (<div onClick={goToTop} id="back-img1"><img rel="preload" src={gotop} alt={ad_img}/></div>)}
         </div>
     );
 
