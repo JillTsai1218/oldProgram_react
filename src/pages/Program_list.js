@@ -14,6 +14,7 @@ import queryString from "query-string";
 import Footer from './../components/Footer.js';
 import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 import ReactPaginate from 'react-paginate';
+import ScrollToTop from './../components/ScrollToTop';
 
 
 const get_id=3; //節目id
@@ -90,10 +91,9 @@ const handlePageClick = (e) => {
 
   return (
     <div className="program_container">
-       
-     <div id="back">
-        <div id="back-img1"><img src={gotop} alt={ad_img}/></div>
-     </div>
+     {/* go to top 按鈕 */}
+     <ScrollToTop/>
+     {/* go to top 按鈕 end */}
       <Myjs />
       <Helmet>
           <meta charSet="utf-8" />

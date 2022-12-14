@@ -16,6 +16,7 @@ import Footer from './../components/Footer.js';
 import { DFPSlotsProvider, AdSlot } from 'react-dfp';
 import $ from 'jquery';
 import { FacebookProvider, Page } from 'react-facebook';
+import ScrollToTop from './../components/ScrollToTop';
 
 var get_pathname=window.location.pathname.split('/').filter(Boolean);
 const get_id=3;
@@ -119,10 +120,9 @@ function Program_detail() {
 
   return (
     <div className="program_container">
-
-     <div id="back">
-        <div id="back-img1"><img src={gotop} alt={ad_img}/></div>
-     </div>
+     {/* go to top 按鈕 */}
+     <ScrollToTop/>
+     {/* go to top 按鈕 end */}
       <Myjs />
       <Helmet>
           <meta charSet="utf-8" />

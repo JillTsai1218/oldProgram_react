@@ -14,7 +14,7 @@ import queryString from "query-string";
 import Footer from './../components/Footer.js';
  import { Gpt } from 'react-gpt-ads';
 import { DFPSlotsProvider, AdSlot } from 'react-dfp';
-
+import ScrollToTop from './../components/ScrollToTop';
 
 const get_id=3; //節目id
 
@@ -92,32 +92,14 @@ function Program_index() {
 
     //const program_info_text=program_info.content.innerHTML;
     const program_info_text= {__html:program_info.content};
-
     const [showTopBtn, setShowTopBtn] = useState(false);
 
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 50) {
-                setShowTopBtn(true);
-            } else {
-                setShowTopBtn(false);
-            }
-        });
-    }, []);
-
-    const goToTop = () => {
-      window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-      });
-  };
   return (
     <div className="program_container">
 
-     <div id="back">
-        {/* <div id="back-img1"><img src={gotop} alt={ad_img}/></div> */}
-        {showTopBtn && (<div onClick={goToTop} id="back-img1"><img src={gotop} alt={ad_img}/></div>)}
-     </div>
+     {/* go to top 按鈕 */}
+     <ScrollToTop/>
+     {/* go to top 按鈕 end */}
       <Myjs />
       <Helmet>
           <meta charSet="utf-8" />
