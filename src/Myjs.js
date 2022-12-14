@@ -127,63 +127,63 @@ export default class Myjs  extends React.Component {
 
     // 大首頁共用ed
 
-        $(window).scroll(function(){object_scroll(); });
-        var header_h=$('.program_header').outerHeight(true);
-        var lastScrollTop = 0;
-        function object_scroll(){
-            if(($(window).scrollTop()>lastScrollTop)){
-                if($(window).width()<1024){
-                    $('.program_content_community_list_mobile').show();
-                }else{
-                    $('.program_content_community_list_mobile').hide();
-                }
-            }else{
-                $('.program_content_community_list_mobile').hide();
-            }
-            lastScrollTop = $(window).scrollTop();
-            if($(window).scrollTop()>header_h){
-                $('.program_content_updown_page_box').fadeIn(300);
-                $('.program_content_community_list').fadeIn(300);
-            }else{
-                $('.program_content_updown_page_box').hide();
-                $('.program_content_community_list').hide();
-            }
+        // $(window).scroll(function(){object_scroll(); });
+        // var header_h=$('.program_header').outerHeight(true);
+        // var lastScrollTop = 0;
+        // function object_scroll(){
+        //     if(($(window).scrollTop()>lastScrollTop)){
+        //         if($(window).width()<1024){
+        //             $('.program_content_community_list_mobile').show();
+        //         }else{
+        //             $('.program_content_community_list_mobile').hide();
+        //         }
+        //     }else{
+        //         $('.program_content_community_list_mobile').hide();
+        //     }
+        //     lastScrollTop = $(window).scrollTop();
+        //     if($(window).scrollTop()>header_h){
+        //         $('.program_content_updown_page_box').fadeIn(300);
+        //         $('.program_content_community_list').fadeIn(300);
+        //     }else{
+        //         $('.program_content_updown_page_box').hide();
+        //         $('.program_content_community_list').hide();
+        //     }
 
-            if($(window).scrollTop()>50){
-                $('#back').fadeIn(300);
-            }else{
-                $('#back').hide();
-            }
-        }
+        //     if($(window).scrollTop()>50){
+        //         $('#back').fadeIn(300);
+        //     }else{
+        //         $('#back').hide();
+        //     }
+        // }
 
         /*gotop*/
-        var $el = $(scrollableElement('html', 'body'));
-        var speed = 550;
-        var $iconTOP = $('#back-img1');
-        $($iconTOP).click(function(event) {
-            event.preventDefault();
-            $el.stop().animate({ scrollTop: -50 }, speed);
-        });
-        // 透過scrollTop檢測可用元素的函數// http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links#update4
-        function scrollableElement() {
-            var i, len, el, $el, scrollable;
-            for (i = 0, len = arguments.length; i < len; i++) {
-                el = arguments[i];
-                $el = $(el);
-                if ($el.scrollTop() > 0) {
+        // var $el = $(scrollableElement('html', 'body'));
+        // var speed = 550;
+        // var $iconTOP = $('#back-img1');
+        // $($iconTOP).click(function(event) {
+        //     event.preventDefault();
+        //     $el.stop().animate({ scrollTop: -50 }, speed);
+        // });
+        // // 透過scrollTop檢測可用元素的函數// http://www.learningjquery.com/2007/10/improved-animated-scrolling-script-for-same-page-links#update4
+        // function scrollableElement() {
+        //     var i, len, el, $el, scrollable;
+        //     for (i = 0, len = arguments.length; i < len; i++) {
+        //         el = arguments[i];
+        //         $el = $(el);
+        //         if ($el.scrollTop() > 0) {
 
-                    return el;
-                } else {
-                    $el.scrollTop(1);
-                    scrollable = $el.scrollTop() > 0;
-                    $el.scrollTop(0);
-                    if (scrollable) {
-                        return el;
-                    }
-                }
-            }
-            return [];
-        }
+        //             return el;
+        //         } else {
+        //             $el.scrollTop(1);
+        //             scrollable = $el.scrollTop() > 0;
+        //             $el.scrollTop(0);
+        //             if (scrollable) {
+        //                 return el;
+        //             }
+        //         }
+        //     }
+        //     return [];
+        // }
         /*gotop ed*/
 
         $('.program_content2_main_button li').each(function(i){
